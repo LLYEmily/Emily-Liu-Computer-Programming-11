@@ -6,6 +6,9 @@ public class Friend {
     String birthday;
     String favouriteColor;
 //Constructor
+// Requires: string, int, string, string
+// Modifies: none
+// Effects: creates friend object
     Friend(String n, int a, String b, String fC){
         name = n;
         age = a;
