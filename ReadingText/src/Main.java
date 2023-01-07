@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-
+//Method to search the word
     public static int Search(String finding) throws IOException{
         FileReader fr = new FileReader("in.txt");
         BufferedReader br = new BufferedReader(fr);
