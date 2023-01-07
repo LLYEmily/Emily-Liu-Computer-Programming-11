@@ -49,33 +49,4 @@ public class Main {
         String a = s.nextLine();
         Search(a);
     }
-        /*BufferedReader br = new BufferedReader(new FileReader("in.txt"));
-        String line;
-        byte[] data = new byte[10];
-        System.in.read(data);
-        while ((line = br.readLine()) != null) {
-            System.out.println(line);
-        }*/
-        /*FileInputStream in;
-        FileOutputStream out;
-        in = new FileInputStream("in.txt");
-        out = new FileOutputStream("out.txt");
-
-
-        Scanner s = new Scanner(new File("filepath"));
-        ArrayList<String> list = new ArrayList<String>();
-        while (s.hasNext()){
-            list.add(s.next());
-        }
-        s.close();*/
-
-
-        /*FileReader in = new FileReader("in.txt");
-
-        System.out.println("Type in one key");
-        System.in.read(data);
-        for (byte b : data) {
-            System.out.println("Byte: " + b + "\tChar: " + (char)b);
-        }*/
-
 }
