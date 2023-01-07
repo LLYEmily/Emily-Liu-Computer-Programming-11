@@ -1,10 +1,13 @@
 package friendbook.friendbook;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+
+import java.io.IOException;
 
 public class Controller {
     public TextField textGetName;
@@ -21,7 +24,7 @@ public class Controller {
     // Requires: action-event from button
     // Modifies: add person in list and display text
     // Effects: method to add friends from the list
-     public void addFriend(ActionEvent actionEvent){
+    public void addFriend(ActionEvent actionEvent) throws IOException{
         String name = textGetName.getText();
         int age = Integer.parseInt(textGetAge.getText());
         String birthday = textGetBirthday.getText();
@@ -33,6 +36,11 @@ public class Controller {
         textGetName.clear();
         textGetBirthday.clear();
         textGetFC.clear();
+        //copy it to Friend.txt
+        ObservableList<Friend> myList = FriendListE.getItems();
+        for (Friend f : myList) {
+            f.writeToFile();
+        }
     }
     // Requires: mouse-event from listview
     // Modifies: display text in the lbl

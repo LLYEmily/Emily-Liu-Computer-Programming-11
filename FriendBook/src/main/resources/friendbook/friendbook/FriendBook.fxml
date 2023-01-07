@@ -169,6 +169,7 @@
                                     </children>
                                 </VBox>
                         <ListView fx:id="FriendListD" layoutX="14.0" layoutY="65.0" onMouseClicked="#viewList" prefHeight="200.0" prefWidth="200.0" />
+                        <Label layoutX="26.0" layoutY="273.0" text="Click on the name to get the info" />
                             </children>
                         </AnchorPane>
                     </content>
@@ -187,7 +188,7 @@
                                         <Font name="Libian SC Regular" size="30.0" />
                                     </font>
                                 </Label>
-                                <ListView fx:id="FriendListE" layoutX="23.0" layoutY="62.0" onMouseClicked="#choseFriend" prefHeight="226.0" prefWidth="166.0" />
+                                <ListView fx:id="FriendListE" layoutX="23.0" layoutY="62.0" prefHeight="226.0" prefWidth="166.0" />
                                 <VBox layoutX="300.0" layoutY="66.0" prefHeight="140.0" prefWidth="100.0" spacing="20.0">
                                     <children>
                                         <Label text="Name :" />
@@ -206,6 +207,7 @@
                                 </VBox>
                                 <Button layoutX="379.0" layoutY="234.0" mnemonicParsing="false" onAction="#addFriend" text="Add" />
                                 <Button layoutX="126.0" layoutY="303.0" mnemonicParsing="false" onAction="#removeFriend" text="Remove" />
+                        <Label layoutX="202.0" layoutY="308.0" text="Click the name in the list and click remove to remove your friend" />
                             </children>
                         </AnchorPane>
                     </content>

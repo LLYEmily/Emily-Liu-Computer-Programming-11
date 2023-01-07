@@ -1,5 +1,9 @@
 package friendbook.friendbook;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Friend {
     String name;
     int age;
@@ -30,6 +34,19 @@ public class Friend {
 
     public String getFavouriteColor() {
         return favouriteColor;
+    }
+
+    //Method to record the information in to file
+    public void writeToFile () throws IOException {
+        FileWriter fw = new FileWriter("Friend.txt", true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(name + ",\r");
+        bw.write(age + ",\r");
+        bw.write(birthday + ",\r");
+        bw.write(favouriteColor + "\r");
+        bw.write(";\r");
+        bw.close();
+
     }
 //change the memory to String
     public String toString () {
