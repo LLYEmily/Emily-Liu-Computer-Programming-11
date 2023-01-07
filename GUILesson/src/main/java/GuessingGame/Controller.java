@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import java.util.Random;
-
+//constructer
 public class Controller {
 
     public TextField textGetNumber;
@@ -15,7 +15,9 @@ public class Controller {
     public int number;
     public Label Points;
 
-
+    //Requies: action-event in button
+    //Modifes: lbl, result, points
+    //Effects: roll ramdom number and add points
     public void rollNumber(ActionEvent actionEvent) {
         Random random = new Random();
         RN = random.nextInt(6) + 1;
