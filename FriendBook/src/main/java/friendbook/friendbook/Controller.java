@@ -18,8 +18,10 @@ public class Controller {
     public ListView<Friend> FriendListD = new ListView<>();
     public ListView<Friend> FriendListE = new ListView<>();
 
-    //create method to add friend
-    public void addFriend(ActionEvent actionEvent) {
+    // Requires: actionevent from button
+    // Modifies: add person in list and display text
+    // Effects: method to add friends from the list
+     public void addFriend(ActionEvent actionEvent){
         String name = textGetName.getText();
         int age = Integer.parseInt(textGetAge.getText());
         String birthday = textGetBirthday.getText();
@@ -32,7 +34,9 @@ public class Controller {
         textGetBirthday.clear();
         textGetFC.clear();
     }
-    //to view the Friends List
+    // Requires: mouseevent from listview
+    // Modifies: display text in the lbl
+    // Effects: to view the Friends List
     public void viewList(MouseEvent mouseEvent) {
         Friend temp;
         temp = FriendListD.getSelectionModel().getSelectedItem();
@@ -41,12 +45,9 @@ public class Controller {
         lblBirthday.setText(temp.getBirthday());
         lblFC.setText(temp.getFavouriteColor());
     }
-    //chose the friend from the list
-    public void choseFriend(MouseEvent mouseEvent) {
-        Friend temp;
-        temp = FriendListE.getSelectionModel().getSelectedItem();
-    }
-    //method to remove friends from the list
+    // Requires: actionevent from button
+    // Modifies: delete person in list and display text
+    // Effects: method to remove friends from the list
     public void removeFriend(ActionEvent actionEvent) {
         Friend temp;
         temp = FriendListE.getSelectionModel().getSelectedItem();
