@@ -3,6 +3,6 @@ module friendbook.friendbook {
     requires javafx.fxml;
 
 
-    opens friendbook.friendbook to javafx.fxml;
-    exports friendbook.friendbook;
+    opens friendbook to javafx.fxml;
+    exports friendbook;
 }
