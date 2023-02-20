@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.Controller">
+  <tabs>
+    <Tab text="Library">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Accordion layoutX="53.0" layoutY="93.0" />
+                  <Label layoutX="224.0" layoutY="24.0" prefHeight="52.0" prefWidth="153.0" text="Libarary">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="53.0" layoutY="93.0" prefHeight="200.0" prefWidth="503.0">
+                     <children>
+                        <Label text="Sign Up:" />
+                        <Label text="Sign up an account first and start to add and borrow your books!" />
+                        <Label text="Log In:" />
+                        <Label text="If already have a account before just log in use your username and password" />
+                        <Label text="Add Book:" />
+                        <Label text="After login, add a book to the book list and start trading!!" />
+                        <Label text="Book List:" />
+                        <Label text="Check out the book list and borrow a book!!!" />
+                        <Label text="My Account:" />
+                        <Label text="Use my account' to check your username and password" />
+                        <Label text="Also you can check the book that you've borrowed and the books that you uploaded!" />
+                        <Label text="Remeber to log out before you left!" />
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Sign up">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Accordion layoutX="53.0" layoutY="93.0" />
+                  <TextField fx:id="textGetName" layoutX="53.0" layoutY="54.0" promptText="Enter your Username" />
+                  <TextField fx:id="textGetPassword" layoutX="53.0" layoutY="93.0" promptText="Set Password" />
+                  <Button layoutX="176.0" layoutY="140.0" mnemonicParsing="false" onAction="#SignUp" text="Sign up" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Log in">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Accordion layoutX="53.0" layoutY="93.0" />
+                  <TextField fx:id="textGetLogName" layoutX="150.0" layoutY="68.0" promptText="Enter your Username" />
+                  <TextField fx:id="textGetLogPW" layoutX="150.0" layoutY="106.0" promptText="Enter your Password" />
+                  <Button layoutX="282.0" layoutY="152.0" mnemonicParsing="false" onAction="#LogIn" text="Log in" />
+                  <Label fx:id="lbLogInRemind" layoutX="285.0" layoutY="193.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+    <Tab text="Add Book">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="59.0" layoutY="41.0" prefHeight="200.0" prefWidth="100.0" spacing="29.0">
+                     <children>
+                        <Label text="Name:" />
+                        <Label text="Author:" />
+                        <Label text="Genre:" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="159.0" layoutY="41.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="textGetABook" promptText="Name" />
+                        <TextField fx:id="textGetAAuthor" promptText="Author" />
+                        <TextField fx:id="textGetAGenre" promptText="Genre" />
+                     </children>
+                  </VBox>
+                  <Button layoutX="132.0" layoutY="251.0" mnemonicParsing="false" onAction="#AddBook" text="Add book" />
+                  <Label fx:id="Reminder" layoutX="222.0" layoutY="33.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Book List">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="413.0" layoutY="197.0" mnemonicParsing="false" onAction="#BorrowBook" text="Borrow" />
+                  <VBox layoutX="300.0" layoutY="25.0" prefHeight="136.0" prefWidth="52.0" spacing="20.0">
+                     <children>
+                        <Label text="Title:" />
+                        <Label text="Author:" />
+                        <Label text="Genre:" />
+                        <Label text="Owner:" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="355.0" layoutY="25.0" prefHeight="131.0" prefWidth="229.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="lbTitle" />
+                        <Label fx:id="lbAuthor" />
+                        <Label fx:id="lbGenre" />
+                        <Label fx:id="lbOwner" />
+                     </children>
+                  </VBox>
+                  <Button layoutX="350.0" layoutY="197.0" mnemonicParsing="false" onAction="#LoadBook" prefWidth="45.0" text="Load" />
+                  <ListView fx:id="BBList" layoutX="48.0" layoutY="44.0" onMouseClicked="#ViewBList" prefHeight="127.0" prefWidth="229.0" />
+                  <Label layoutX="50.0" layoutY="17.0" text="Available" />
+                  <Label fx:id="Reminder1" layoutX="365.0" layoutY="249.0" />
+                  <Label layoutX="50.0" layoutY="184.0" text="Click on the list to check details" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="My Account">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lbAName" layoutX="87.0" layoutY="29.0" />
+                  <ListView fx:id="AccBList" layoutX="28.0" layoutY="108.0" prefHeight="92.0" prefWidth="400.0" />
+                  <Label layoutX="29.0" layoutY="81.0" text="My Borrowing" />
+                  <Label fx:id="lbAPassword" layoutX="300.0" layoutY="29.0" />
+                  <ListView fx:id="AccBookList" layoutX="28.0" layoutY="242.0" prefHeight="106.0" prefWidth="399.0" />
+                  <Label layoutX="29.0" layoutY="214.0" text="My Books" />
+                  <Label layoutX="28.0" layoutY="28.0" text="Name :" />
+                  <Label layoutX="216.0" layoutY="29.0" text="Password :" />
+                  <Button layoutX="490.0" layoutY="24.0" mnemonicParsing="false" onAction="#LogOut" text="Log Out" />
+                  <Button layoutX="446.0" layoutY="108.0" mnemonicParsing="false" onAction="#LoadAccB" text="Load" />
+                  <Button layoutX="446.0" layoutY="251.0" mnemonicParsing="false" onAction="#LoadAccBook" text="Load" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
