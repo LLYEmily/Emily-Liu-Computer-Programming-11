@@ -1,6 +1,0 @@
-The Great Gatsby,F. Scott Fitzgerald,Fiction,test,true;
-Hamlet,William Shakespeare,Play,test,false;
-In Search of Lost Time,Marcel Proust,Philosophical fiction,test,false;
-Pride and Prejudice,Jane Austen,Classic Regency novel,user,true;
-Alice's Adventures in Wonderland,Lewis Carroll,Fantasy,user,false;
-Nineteen Eighty Four,George Orwell,Science fiction,user,false;
